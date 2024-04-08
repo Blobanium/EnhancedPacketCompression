@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "enhancedpacketcompression",
+  "version": "${version}",
+  "name": "EnhancedPacketCompression",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Kameren/EnhancedPacketCompression"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "buzz.blobanium.enhancedpacketcompression.EnhancedPacketCompression"
+    ]
+  },
+  "mixins": [
+    "enhancedpacketcompression.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}

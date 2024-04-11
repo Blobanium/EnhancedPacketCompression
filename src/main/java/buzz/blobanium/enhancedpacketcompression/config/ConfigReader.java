@@ -29,7 +29,7 @@ public class ConfigReader {
     }
 
     private static String ltProvider(String filename) {
-        return "#Bumble Kingdom Core Config File."
+        return "#Enhanced Packet Compression Config File."
                 + "\npacket_compression_level=" + packetCompressionLevel;
 
     }

@@ -3,7 +3,7 @@ package buzz.blobanium.enhancedpacketcompression.mixin;
 import buzz.blobanium.enhancedpacketcompression.config.ConfigReader;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import net.minecraft.network.PacketDeflater;
+import net.minecraft.network.handler.PacketDeflater;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

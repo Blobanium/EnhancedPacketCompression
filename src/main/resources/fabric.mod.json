@@ -19,6 +19,6 @@
     "enhancedpacketcompression.mixins.json"
   ],
   "depends": {
-    "minecraft": "<=1.20.1"
+    "minecraft": ">=1.20.2"
   }
 }

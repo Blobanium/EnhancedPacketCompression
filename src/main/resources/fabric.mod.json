@@ -9,7 +9,7 @@
     "repo": "https://github.com/Blobanium/EnhancedPacketCompression"
   },
   "license": "MIT",
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": [
       "buzz.blobanium.enhancedpacketcompression.EnhancedPacketCompression"

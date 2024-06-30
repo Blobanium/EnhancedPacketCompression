@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "EnhancedPacketCompression",
   "description": "",
-  "authors": [],
+  "authors": ["Blobanium"],
   "contact": {
     "repo": "https://github.com/Blobanium/EnhancedPacketCompression"
   },

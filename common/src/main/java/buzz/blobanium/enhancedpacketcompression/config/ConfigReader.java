@@ -1,6 +1,5 @@
 package buzz.blobanium.enhancedpacketcompression.config;
 
-import net.fabricmc.loader.api.FabricLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -38,24 +37,5 @@ public class ConfigReader {
                 + "\npacket_compression_level=" + packetCompressionLevel
                 + "\nlog_packet_exceptions=" + logPacketExceptions;
 
-    }
-
-    public static void refreshConfig(){
-        if(needsConfigRefresh) {
-            refreshingConfig = true;
-            try {
-                if (!Files.deleteIfExists(FabricLoader.getInstance().getConfigDir().resolve("MineclubExpanded.properties"))) {
-                    LOGGER.error("Config file not found. Please ensure the path to the config is correct.\n" + FabricLoader.getInstance().getConfigDir().resolve("LoadingTimer.properties"));
-                }
-            } catch (IOException e) {
-                LOGGER.fatal("Config Refresh Failed due to a IOException, please report this on our issues thread.", e);
-            }
-            configRegister(false);
-            refreshingConfig = false;
-        }
-    }
-
-    public static void onConfigSave(){
-        needsConfigRefresh = true;
     }
 }

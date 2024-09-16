@@ -17,9 +17,6 @@
   "entrypoints": {
     "main": [
       "buzz.blobanium.fabric.EnhancedPacketCompressionFabric"
-    ],
-    "client": [
-      "buzz.blobanium.fabric.client.ExampleModFabricClient"
     ]
   },
   "mixins": [

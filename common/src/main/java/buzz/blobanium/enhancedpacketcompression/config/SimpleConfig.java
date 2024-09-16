@@ -24,7 +24,7 @@ package buzz.blobanium.enhancedpacketcompression.config;
  * THE SOFTWARE.
  */
 
-import net.fabricmc.loader.api.FabricLoader;
+import buzz.blobanium.enhancedpacketcompression.EnhancedPacketCompression;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -101,7 +101,7 @@ public class SimpleConfig {
      * @return new config request object
      */
     public static ConfigRequest of( String filename ) {
-        Path path = FabricLoader.getInstance().getConfigDir();
+        Path path = EnhancedPacketCompression.configDir;
         return new ConfigRequest( path.resolve( filename + ".properties" ).toFile(), filename );
     }
 

@@ -2,6 +2,7 @@ package buzz.blobanium.fabric;
 
 import buzz.blobanium.enhancedpacketcompression.EnhancedPacketCompression;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 
 public final class EnhancedPacketCompressionFabric implements ModInitializer {
     @Override
@@ -11,7 +12,7 @@ public final class EnhancedPacketCompressionFabric implements ModInitializer {
         // Proceed with mild caution.
 
         // Run our common setup.
+        EnhancedPacketCompression.configDir = FabricLoader.getInstance().getConfigDir();
         EnhancedPacketCompression.init();
-
     }
 }

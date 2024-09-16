@@ -3,9 +3,6 @@ package buzz.blobanium.enhancedpacketcompression.config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.IOException;
-import java.nio.file.Files;
-
 
 public class ConfigReader {
     public static final Logger LOGGER = LogManager.getLogger("EnhancedPacketCompression - Config");

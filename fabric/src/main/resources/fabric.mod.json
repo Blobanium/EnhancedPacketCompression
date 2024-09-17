@@ -4,21 +4,28 @@
   "version": "${version}",
   "name": "EnhancedPacketCompression",
   "description": "",
-  "authors": ["Blobanium"],
+  "authors": [
+    "Blobanium"
+  ],
   "contact": {
     "repo": "https://github.com/Blobanium/EnhancedPacketCompression"
   },
   "license": "MIT",
+  "icon": "assets/enhancedpacketcompression/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "buzz.blobanium.enhancedpacketcompression.EnhancedPacketCompression"
+      "buzz.blobanium.fabric.EnhancedPacketCompressionFabric"
     ]
   },
   "mixins": [
     "enhancedpacketcompression.mixins.json"
   ],
   "depends": {
-    "minecraft": "<=1.20.1"
+    "fabricloader": ">=0.16.5",
+    "minecraft": ">=1.20.2",
+    "java": ">=17",
+    "architectury": ">=11.1.17",
+    "fabric-api": "*"
   }
 }

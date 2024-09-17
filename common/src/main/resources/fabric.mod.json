@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "enhancedpacketcompression",
+  "version": "${version}",
+  "name": "EnhancedPacketCompression",
+  "description": "",
+  "authors": ["Blobanium"],
+  "contact": {
+    "repo": "https://github.com/Blobanium/EnhancedPacketCompression"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "buzz.blobanium.enhancedpacketcompression.EnhancedPacketCompression"
+    ]
+  },
+  "mixins": [
+    "enhancedpacketcompression.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.20.2"
+  }
+}

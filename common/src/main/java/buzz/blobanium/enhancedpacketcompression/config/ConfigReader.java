@@ -1,11 +1,7 @@
 package buzz.blobanium.enhancedpacketcompression.config;
 
-import net.fabricmc.loader.api.FabricLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.io.IOException;
-import java.nio.file.Files;
 
 
 public class ConfigReader {
@@ -15,14 +11,18 @@ public class ConfigReader {
     public static boolean refreshingConfig = false;
 
     //configs
+    public static boolean enabled = true;
     public static int packetCompressionLevel = 2;
+    public static boolean logPacketExceptions = false;
 
     public static void configRegister(boolean initialize){
         LOGGER.debug("Registering config..");
         SimpleConfig CONFIG = SimpleConfig.of("enhancedpacketcompression").provider(ConfigReader::ltProvider).request();
 
         if(initialize) {
+            enabled = CONFIG.getOrDefault("enabled", enabled);
             packetCompressionLevel = CONFIG.getOrDefault("packet_compression_level", packetCompressionLevel);
+            logPacketExceptions = CONFIG.getOrDefault("log_packet_exceptions", logPacketExceptions);
         }
 
         LOGGER.debug("Regestering done!");
@@ -30,26 +30,9 @@ public class ConfigReader {
 
     private static String ltProvider(String filename) {
         return "#Enhanced Packet Compression Config File."
-                + "\npacket_compression_level=" + packetCompressionLevel;
+                + "\nenabled=" + enabled
+                + "\npacket_compression_level=" + packetCompressionLevel
+                + "\nlog_packet_exceptions=" + logPacketExceptions;
 
-    }
-
-    public static void refreshConfig(){
-        if(needsConfigRefresh) {
-            refreshingConfig = true;
-            try {
-                if (!Files.deleteIfExists(FabricLoader.getInstance().getConfigDir().resolve("MineclubExpanded.properties"))) {
-                    LOGGER.error("Config file not found. Please ensure the path to the config is correct.\n" + FabricLoader.getInstance().getConfigDir().resolve("LoadingTimer.properties"));
-                }
-            } catch (IOException e) {
-                LOGGER.fatal("Config Refresh Failed due to a IOException, please report this on our issues thread.", e);
-            }
-            configRegister(false);
-            refreshingConfig = false;
-        }
-    }
-
-    public static void onConfigSave(){
-        needsConfigRefresh = true;
     }
 }

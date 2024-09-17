@@ -3,15 +3,14 @@
   "id": "enhancedpacketcompression",
   "version": "${version}",
   "name": "EnhancedPacketCompression",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "",
   "authors": [
-    "Me!"
+    "Blobanium"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "repo": "https://github.com/Blobanium/EnhancedPacketCompression"
   },
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/enhancedpacketcompression/icon.png",
   "environment": "*",
   "entrypoints": {
@@ -24,12 +23,9 @@
   ],
   "depends": {
     "fabricloader": ">=0.16.5",
-    "minecraft": "~1.20.4",
+    "minecraft": ">=1.20.2",
     "java": ">=17",
     "architectury": ">=11.1.17",
     "fabric-api": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

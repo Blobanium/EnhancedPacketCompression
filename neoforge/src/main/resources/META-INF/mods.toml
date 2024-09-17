@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+issueTrackerURL = "https://github.com/Blobanium/EnhancedPacketCompression/issues"
+license = "MIT"
 
 [[mods]]
 modId = "enhancedpacketcompression"
 version = "${version}"
-displayName = "EnhancedPacketCompression"
-authors = "Me!"
+displayName = "Enhanced Packet Compression"
+authors = "Blobanium"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+
 '''
 #logoFile = ""
 
